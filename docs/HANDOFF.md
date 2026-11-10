@@ -54,6 +54,8 @@
 4-1. (완료) 유형표 ③ 문서 결합 보완: Q&A 공지상 결합 PDF는 모든 줄에 "③ 문서 결합"을 적어야 한다. 26줄 수정함 ([`FINAL_REVIEW.md`](FINAL_REVIEW.md) 10절)
 5. 산출물 파일 이름을 `경크크_최종제출_*`로 맞추고 데모 영상 · 발표 자료 준비, 구글폼 제출 (#12~#14)
 5-1. 웹 서비스를 최종 워크플로우 · 데이터셋에 맞추기 (#11). 데모는 Vercel 배포를 검토 중. 상세는 6절
+5-2. (완료, 2026-11-10) 데모 영상: `demo-video/`(Remotion)로 만들어 `demo-video/out/경크크_최종제출_데모영상.mp4`(159.6초, 커밋 안 함, `npm run render`로 다시 만듦). 배포 사이트(https://sageuk-check.vercel.app)를 실제 API로 녹화했고 SC-002 충돌, SC-012 검토 필요로 정답과 같았다. 녹화 방법은 [`demo-video/README.md`](../demo-video/README.md)
+5-3. (할 일) 결과 화면 전환이 멈추는 버그: `src/app/verify/page.tsx`의 진행 조회가 `setInterval`이라 응답이 겹친다. 결과 뒤에 늦게 온 `in_progress` 응답은 진행 화면으로 되돌리고, 두 번째 `completed` 응답은 `clearTimers()`로 결과 화면 전환 타이머를 지워 빈 화면에서 멈춘다. 녹화 중 두 번 재현됨. 조회가 진행 중이면 다음 조회를 건너뛰고, 끝난 뒤 온 응답은 무시하게 고친다. 데모데이 시연 전에 고쳐야 한다
 
 6. 프롬프트를 다시 고치면 config 번호가 바뀐다 → `.env` 갱신 → 전체 재실행 → 게시 · 내보내기는 그 config로
 7. 제출 후: [`FINAL_REVIEW.md`](FINAL_REVIEW.md) 9절 후속 설계 과제

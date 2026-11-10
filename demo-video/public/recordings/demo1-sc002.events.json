@@ -1,0 +1,64 @@
+{
+  "case": "demo1",
+  "site": "https://sageuk-check.vercel.app",
+  "frames": 2424,
+  "durationSec": 117.16,
+  "events": [
+    {
+      "name": "record_start",
+      "t": -0.05
+    },
+    {
+      "name": "tab_click",
+      "t": 4.69
+    },
+    {
+      "name": "sample_click",
+      "t": 6.86
+    },
+    {
+      "name": "start_click",
+      "t": 11.71
+    },
+    {
+      "name": "progress_shown",
+      "t": 12.01
+    },
+    {
+      "name": "result_shown",
+      "t": 95.91,
+      "waitedSeconds": 82
+    },
+    {
+      "name": "citation_click",
+      "t": 99.92,
+      "label": "근거 3: 원문 1쪽에서 보기"
+    },
+    {
+      "name": "citation_click",
+      "t": 104.46,
+      "label": "근거 4: 원문 4쪽에서 보기"
+    },
+    {
+      "name": "page_groups",
+      "t": 108.53
+    },
+    {
+      "name": "page_nav_click",
+      "t": 110.69
+    },
+    {
+      "name": "page_nav_click",
+      "t": 113.72
+    },
+    {
+      "name": "source_reference",
+      "t": 116.16
+    },
+    {
+      "name": "record_end",
+      "t": 120.36,
+      "decision": "충돌"
+    }
+  ]
+}
